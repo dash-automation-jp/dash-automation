@@ -57,35 +57,11 @@ We help companies reduce manual tasks, eliminate errors, and improve operational
 All tools run locally on your computer.
 No customer card information or sensitive data is collected or stored.
 
-### **System Requirements**
+### System Requirements
 
-- **Microsoft Excel & Word:** Office 2010 or later
-- **Operating System:** Windows (Mac support planned for future release)
-- **Email Client:** Outlook (Classic version)
+- Microsoft Excel & Word: Office 2010 or later
+- Operating System: Windows (Mac support planned for future release)
+- Email Client: Outlook (Classic version)
 
-Example Product / Sample Offering
 
-Product Name:
-PDF Auto Mailer
 
-Price:
-USD 34 (one-time payment)
-
-Description:
-A desktop automation tool that converts Word or Excel documents into PDF files
-and automatically prepares and sends emails with the PDF attached.
-
-This product is available for immediate purchase.
-
-### Refund Policy
-
-Refunds are not offered for digital services, except in cases of technical failure caused directly by our software.
-If an issue occurs, please contact us and we will assist promptly.
-
-### **Payment**
-
-All payments are securely processed through **Stripe**.
-
-### **Contact**
-
-Email: **tadashtd@gmail.com**
