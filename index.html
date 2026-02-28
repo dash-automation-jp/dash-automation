@@ -1,189 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>DASH Automation — One-Click PDF & Email Automation</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DASH Automation — One-Click PDF & Email</title>
+<meta name="description" content="One-click PDF creation and email attachment for Excel/Word business documents. 14-day free trial. One-time payment $34." />
 <style>
-body{
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-  max-width: 920px;
-  margin: auto;
-  padding: 24px;
-  line-height: 1.65;
-  color:#111;
-}
-h1{font-size:2.4em;margin-bottom:10px;}
-h2{margin-top:50px;}
-.cta{
-  display:inline-block;
-  padding:14px 22px;
-  margin:12px 12px 12px 0;
-  background:#111;
-  color:#fff;
-  text-decoration:none;
-  border-radius:6px;
-  font-weight:600;
-}
-.cta.secondary{
-  background:#2e7d32;
-}
-.section{
-  margin-top:40px;
-}
-.box{
-  background:#f5f7fa;
-  padding:20px;
-  border-radius:8px;
-  margin:20px 0;
-}
-iframe{
-  margin-top:15px;
-}
-hr{
-  margin:60px 0;
-}
-ul{padding-left:20px;}
+  :root{
+    --text:#111;
+    --muted:#555;
+    --bg:#fff;
+    --card:#f6f8fa;
+    --border:#e5e7eb;
+    --cta:#111;
+    --cta2:#2e7d32;
+  }
+  body{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 24px;
+    line-height: 1.65;
+  }
+  a{ color: inherit; }
+  h1{ font-size: 2.3em; margin: 10px 0 6px; }
+  h2{ margin-top: 54px; }
+  h3{ margin-top: 28px; }
+  .sub{ color: var(--muted); margin-top: 0; }
+  .row{ display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+  .cta{
+    display:inline-block;
+    padding: 14px 20px;
+    border-radius: 8px;
+    text-decoration:none;
+    font-weight: 700;
+    border: 1px solid #111;
+    background: var(--cta);
+    color: #fff;
+  }
+  .cta.secondary{
+    background: var(--cta2);
+    border-color: var(--cta2);
+  }
+  .cta.ghost{
+    background: transparent;
+    color: var(--text);
+  }
+  .pill{
+    display:inline-block;
+    padding: 4px 10px;
+    border:1px solid var(--border);
+    border-radius: 999px;
+    font-size: 0.9em;
+    color: var(--muted);
+    background: #fff;
+  }
+  .card{
+    background: var(--card);
+    border:1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    margin: 18px 0;
+  }
+  .grid2{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  @media(min-width:820px){
+    .grid2{ grid-template-columns: 1fr 1fr; }
+  }
+  ul{ padding-left: 20px; }
+  .muted{ color: var(--muted); }
+  .hr{ height:1px; background: var(--border); margin: 28px 0; }
+  iframe{ width:100%; border:0; border-radius: 10px; }
+  .faq details{
+    border:1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    background:#fff;
+    margin: 10px 0;
+  }
+  .faq summary{
+    cursor: pointer;
+    font-weight: 700;
+  }
+  .small{ font-size: 0.95em; }
+  .footer{ text-align:center; color: var(--muted); margin: 54px 0 10px; }
 </style>
 </head>
 
 <body>
 
-<h1>DASH Automation</h1>
+<header>
+  <span class="pill">Excel / Word</span>
+  <span class="pill">PDF</span>
+  <span class="pill">Email Draft + Attachment</span>
+  <span class="pill">14-Day Free Trial</span>
 
-<p><strong>Convert Excel or Word documents to PDF and prepare emails in seconds — with one click.</strong></p>
+  <h1>DASH Automation</h1>
+  <p class="sub"><strong>One-click</strong> PDF creation and email attachment for business documents created in Excel or Word.</p>
 
-<p>
-<a class="cta secondary" href="https://forms.gle/EYk4mDCcDhGyNNM16" target="_blank">
-Start Free Trial
-</a>
-<a class="cta" href="https://buy.stripe.com/6oUfZh1Om5TY3eJ0Lw8Vi00" target="_blank">
-Buy Now — $34 (One-Time)
-</a>
-</p>
+  <div class="row">
+    <a class="cta secondary" href="https://forms.gle/EYk4mDCcDhGyNNM16" target="_blank" rel="noopener">Start Free Trial</a>
+    <a class="cta" href="https://buy.stripe.com/6oUfZh1Om5TY3eJ0Lw8Vi00" target="_blank" rel="noopener">Buy Now — $34 (One-Time)</a>
+    <a class="cta ghost" href="#videos">Watch Demos</a>
+  </div>
 
-<p>Designed for small businesses, freelancers, and office teams who create invoices, quotations, and reports every day.</p>
+  <p class="muted small">
+    Built for small businesses and office workflows (invoices, quotations, purchase orders, reports).
+  </p>
+</header>
 
-<hr>
+<div class="hr"></div>
 
-<h2>What You Can Do</h2>
+<section>
+  <h2>Why Teams Use This</h2>
 
-<ul>
-<li>Convert invoices, quotations, purchase orders to PDF instantly</li>
-<li>Automatically attach the PDF to an email draft</li>
-<li>Save PDFs directly to desktop (no email required)</li>
-<li>Turn multiple images into a multi-page PDF via Word</li>
-<li>Eliminate manual exporting and file searching</li>
-</ul>
+  <div class="grid2">
+    <div class="card">
+      <h3>Reduce repetitive work</h3>
+      <ul>
+        <li>No repeated “Save as PDF → find file → attach → write email”.</li>
+        <li>Generate the PDF and prepare the email draft with one click.</li>
+      </ul>
+    </div>
 
-<hr>
+    <div class="card">
+      <h3>Prevent mistakes</h3>
+      <ul>
+        <li>Lower risk of attaching the wrong file.</li>
+        <li>Consistent email subject/body based on your settings.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-<h2>See It in Action</h2>
+<section>
+  <h2>What You Can Do</h2>
+  <div class="card">
+    <ul>
+      <li>Create a PDF from Excel or Word with one click</li>
+      <li>Attach the PDF to an email draft automatically</li>
+      <li>Option: save the PDF to the desktop only (no email)</li>
+      <li>Convert documents with photos/images to PDF via Word</li>
+      <li>Works entirely on your local computer</li>
+    </ul>
+    <p class="muted small">
+      Outlook (Classic) is required only for automatic email preparation/sending. PDF creation works without Outlook.
+    </p>
+  </div>
+</section>
 
-<h3>Excel → PDF → Email</h3>
-<iframe width="100%" height="420"
-src="https://www.youtube.com/embed/JfLtdqxC8jE"
-frameborder="0" allowfullscreen></iframe>
+<section id="videos">
+  <h2>Demo Videos</h2>
 
-<h3>Word → PDF → Email</h3>
-<iframe width="100%" height="420"
-src="https://www.youtube.com/embed/jZDfNwd9lqs"
-frameborder="0" allowfullscreen></iframe>
+  <div class="card">
+    <h3>Excel → PDF → Email</h3>
+    <iframe height="420" src="https://www.youtube.com/embed/JfLtdqxC8jE" allowfullscreen></iframe>
+  </div>
 
-<h3>Images → PDF → Desktop</h3>
-<iframe width="100%" height="420"
-src="https://www.youtube.com/embed/bYxeDP1sbHU"
-frameborder="0" allowfullscreen></iframe>
+  <div class="card">
+    <h3>Word → PDF → Email</h3>
+    <iframe height="420" src="https://www.youtube.com/embed/jZDfNwd9lqs" allowfullscreen></iframe>
+  </div>
 
-<hr>
+  <div class="card">
+    <h3>Images → PDF → Desktop</h3>
+    <iframe height="420" src="https://www.youtube.com/embed/bYxeDP1sbHU" allowfullscreen></iframe>
+  </div>
+</section>
 
-<h2>Free Trial</h2>
+<section>
+  <h2>Free Trial (14 Days)</h2>
+  <div class="card">
+    <p><strong>Try all features free for 14 days.</strong></p>
+    <ul>
+      <li>After submitting the form, you will receive the trial workbook by email.</li>
+      <li>After 14 days, a password is required to continue using the workbook.</li>
+      <li>If you purchase, you will receive an unlock code to activate permanent use on your computer.</li>
+    </ul>
 
-<div class="box">
-<p><strong>14-day full-feature trial. No payment required.</strong></p>
+    <div class="row">
+      <a class="cta secondary" href="https://forms.gle/EYk4mDCcDhGyNNM16" target="_blank" rel="noopener">Apply for Free Trial</a>
+      <a class="cta ghost" href="#faq">See FAQ</a>
+    </div>
+  </div>
+</section>
 
-<p>All features are available during the trial period.  
-After 14 days, a password is required to continue using the workbook.</p>
+<section>
+  <h2>Pricing</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>Lifetime License</h3>
+      <p style="font-size:1.25em; margin: 8px 0;"><strong>$34</strong> (one-time)</p>
+      <ul>
+        <li>No subscription fees</li>
+        <li>Unlimited use after activation</li>
+        <li>License valid for one computer</li>
+      </ul>
+      <a class="cta" href="https://buy.stripe.com/6oUfZh1Om5TY3eJ0Lw8Vi00" target="_blank" rel="noopener">Buy Now — $34</a>
+    </div>
 
-<a class="cta secondary" href="https://forms.gle/EYk4mDCcDhGyNNM16" target="_blank">
-Apply for Free Trial
-</a>
-</div>
+    <div class="card">
+      <h3>What You Receive</h3>
+      <ul>
+        <li>Macro-enabled workbook (not an executable file)</li>
+        <li>Unlock code after purchase</li>
+        <li>Email support for setup/activation/technical issues</li>
+      </ul>
+      <p class="muted small">
+        Support is provided via email only (no phone/live chat).
+      </p>
+    </div>
+  </div>
+</section>
 
-<hr>
+<section>
+  <h2>System Requirements</h2>
+  <div class="card">
+    <ul>
+      <li>Windows 10 or later</li>
+      <li>Microsoft Office 2010 or later</li>
+      <li>Outlook (Classic) — required only for automatic email</li>
+    </ul>
+  </div>
+</section>
 
-<h2>Pricing</h2>
+<section>
+  <h2>Security & Privacy</h2>
+  <div class="card">
+    <ul>
+      <li>Provided as a macro-enabled workbook (not an executable file)</li>
+      <li>Runs locally on your computer</li>
+      <li>No customer payment information is collected by the software</li>
+    </ul>
+  </div>
+</section>
 
-<div class="box">
-<p><strong>$34 — One-Time Payment</strong></p>
-<p>No subscription required. Lifetime use of the purchased workbook.</p>
+<section>
+  <h2>License & Renewal Confirmation</h2>
+  <div class="card">
+    <p><strong>Lifetime license for one computer.</strong></p>
+    <p class="small">
+      To maintain license integrity and provide ongoing support, a simple renewal confirmation is required approximately every 6 months.
+      Once confirmed, your license remains active.
+    </p>
+    <p class="muted small">
+      If your email address changes, please contact us so we can keep your license information up to date.
+    </p>
+  </div>
+</section>
 
-<p><strong>Optional Support — $7/month</strong><br>
-Includes ongoing fixes, minor adjustments, and maintenance support.</p>
+<section id="faq" class="faq">
+  <h2>FAQ</h2>
 
-<a class="cta" href="https://buy.stripe.com/6oUfZh1Om5TY3eJ0Lw8Vi00" target="_blank">
-Buy Now — $34
-</a>
-</div>
+  <details>
+    <summary>Is this a subscription?</summary>
+    <p class="small">No. The main product is a one-time payment ($34). There are no subscription fees.</p>
+  </details>
 
-<hr>
+  <details>
+    <summary>Do I need Outlook to use it?</summary>
+    <p class="small">Outlook (Classic) is required only for automatic email preparation/sending. You can still create PDFs and save them to the desktop without Outlook.</p>
+  </details>
 
-<h2>How It Works</h2>
+  <details>
+    <summary>What happens after the 14-day trial?</summary>
+    <p class="small">After 14 days from the start of the trial, a password is required to continue using the workbook. Purchasing provides an unlock code for permanent use on your computer.</p>
+  </details>
 
-<ol>
-<li>Open your Excel or Word document</li>
-<li>Enter required information in the macro sheet</li>
-<li>Click one button to generate the PDF (and optionally prepare the email)</li>
-</ol>
+  <details>
+    <summary>What if I change computers?</summary>
+    <p class="small">The license is valid for one computer. If you replace your computer, contact support for reactivation.</p>
+  </details>
 
-<p>That’s it. No complicated setup.</p>
+  <details>
+    <summary>How do I contact support?</summary>
+    <p class="small">Support is provided via email only. Please use the contact option shown in the workbook or reply to the email you received.</p>
+  </details>
+</section>
 
-<hr>
+<section>
+  <h2>Get Started</h2>
+  <div class="card">
+    <div class="row">
+      <a class="cta secondary" href="https://forms.gle/EYk4mDCcDhGyNNM16" target="_blank" rel="noopener">Start Free Trial</a>
+      <a class="cta" href="https://buy.stripe.com/6oUfZh1Om5TY3eJ0Lw8Vi00" target="_blank" rel="noopener">Buy Now — $34</a>
+    </div>
+    <p class="muted small">
+      DASH Automation — Tadashi Kuroda
+    </p>
+  </div>
+</section>
 
-<h2>System Requirements</h2>
-
-<ul>
-<li>Windows 10 or later</li>
-<li>Microsoft Office 2010 or later</li>
-<li>Outlook (Classic) — required only for automatic email preparation</li>
-</ul>
-
-<hr>
-
-<h2>Security & Privacy</h2>
-
-<ul>
-<li>Provided as a macro-enabled workbook (not an executable file)</li>
-<li>Runs locally on your computer</li>
-<li>No customer data is collected or transmitted</li>
-<li>No cloud dependency</li>
-</ul>
-
-  <hr>
-
-<h2>License & Support</h2>
-
-<ul>
-<li><strong>Single-PC License:</strong> The license is valid for one computer at a time.</li>
-
-<li><strong>PC Replacement:</strong> If you replace your computer due to upgrade or failure, your license can be reactivated.</li>
-
-<li><strong>Activation Code Reissue:</strong> If you reinstall the software or encounter activation issues, we can reissue your activation code after verification.</li>
-
-<li><strong>Email Support:</strong> Support is provided via email for installation issues, activation problems, and basic usage questions.</li>
-
-</ul>
-
-<hr>
-
-<h2>About DASH Automation</h2>
-
-<p>
-DASH Automation focuses on practical document workflow automation for real business use.  
-The goal is simple: reduce repetitive work and prevent human error in daily operations.
-</p>
-
-<p><strong>DASH Automation — Tadashi Kuroda</strong></p>
+<p class="footer">© DASH Automation</p>
 
 </body>
 </html>
