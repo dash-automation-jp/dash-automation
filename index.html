@@ -1,151 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>DASH Automation | Excel and Word PDF & Email Automation</title>
+<meta name="description" content="Automate PDF creation and email preparation from Excel and Word documents. Try the 14-day free trial first, then choose a 1 PC, 2 PC, or 5 PC lifetime license." />
+<meta name="keywords" content="Excel automation, Word automation, VBA tool, PDF automation, Outlook draft automation, invoice PDF, business document automation, macro workbook" />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://dash-automation-jp.github.io/dash-automation/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="DASH Automation | Excel and Word PDF & Email Automation" />
+<meta property="og:description" content="Automate PDF creation and email preparation from Excel and Word documents. Start with a 14-day free trial." />
+<meta property="og:url" content="https://dash-automation-jp.github.io/dash-automation/" />
+<meta property="og:site_name" content="DASH Automation" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="DASH Automation | Excel and Word PDF & Email Automation" />
+<meta name="twitter:description" content="Automate PDF creation and email preparation from Excel and Word documents. Start with a 14-day free trial." />
+
+<style>
+:root {
+--bg: #ffffff;
+--text: #111111;
+--muted: #5f6368;
+--line: #e5e7eb;
+--card: #f8fafc;
+--primary: #166534;
+--primary-hover: #14532d;
+--secondary: #1d4ed8;
+--secondary-hover: #1e40af;
+--soft: #eef2ff;
+--max: 1120px;
+--radius: 14px;
+--shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+* { box-sizing: border-box; }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background: var(--bg);
+color: var(--text);
+line-height: 1.65;
+}
+
+a {
+color: inherit;
+}
+
+.container {
+width: min(100% - 32px, var(--max));
+margin: 0 auto;
+}
+
+.hero {
+padding: 56px 0 32px;
+}
+
+.eyebrow {
+display: inline-block;
+margin-bottom: 14px;
+padding: 6px 12px;
+border-radius: 999px;
+background: var(--soft);
+color: var(--secondary);
+font-size: 14px;
+font-weight: 700;
+}
+
+h1 {
+margin: 0 0 16px;
+font-size: clamp(34px, 6vw, 58px);
+line-height: 1.08;
+letter-spacing: -0.02em;
+}
+
+.subhead {
+max-width: 860px;
+font-size: clamp(18px, 2.4vw, 24px);
+color: var(--muted);
+margin: 0 0 18px;
+}
+
+.trust-line {
+font-size: 17px;
+font-weight: 700;
+margin: 0 0 24px;
+}
+
+.cta-row {
+display: flex;
+flex-wrap: wrap;
+gap: 14px;
+margin: 0 0 18px;
+}
+
+.btn {
+display: inline-block;
+text-decoration: none;
+padding: 16px 22px;
+border-radius: 12px;
+font-weight: 700;
+text-align: center;
+border: 1px solid transparent;
+transition: 0.2s ease;
+min-width: 220px;
+}
+
+.btn-primary {
+background: var(--primary);
+color: #fff;
+}
+
+.btn-primary:hover {
+background: var(--primary-hover);
+}
+
+.btn-secondary {
+background: var(--secondary);
+color: #fff;
+}
+
+.btn-secondary:hover {
+background: var(--secondary-hover);
+}
+
+.btn-ghost {
+background: #fff;
+border-color: var(--line);
+color: var(--text);
+}
+
+.btn-ghost:hover {
+background: #fafafa;
+}
+
+.helper {
+color: var(--muted);
+font-size: 15px;
+margin: 0;
+}
+
+.section {
+padding: 28px 0;
+border-top: 1px solid var(--line);
+}
+
+h2 {
+margin: 0 0 16px;
+font-size: clamp(28px, 4vw, 40px);
+line-height: 1.15;
+letter-spacing: -0.02em;
+}
+
+h3 {
+margin: 0 0 10px;
+font-size: 22px;
+line-height: 1.25;
+}
+
+.lead {
+color: var(--muted);
+margin: 0 0 18px;
+font-size: 18px;
+}
+
+.grid-2 {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 18px;
+}
+
+.grid-3 {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 18px;
+}
+
+.card {
+background: var(--card);
+border: 1px solid var(--line);
+border-radius: var(--radius);
+padding: 22px;
+box-shadow: var(--shadow);
+}
+
+.card p:last-child,
+.card ul:last-child {
+margin-bottom: 0;
+}
+
+ul.clean {
+margin: 0;
+padding-left: 20px;
+}
+
+.video-wrap {
+position: relative;
+width: 100%;
+padding-bottom: 56.25%;
+border-radius: var(--radius);
+overflow: hidden;
+border: 1px solid var(--line);
+background: #000;
+box-shadow: var(--shadow);
+}
+
+.video-wrap iframe {
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+border: 0;
+}
+
+.purchase-note {
+margin: 0 0 22px;
+padding: 16px 18px;
+border-left: 4px solid var(--primary);
+background: #f0fdf4;
+border-radius: 8px;
+color: #14532d;
+font-weight: 700;
+}
+
+.price-card {
+display: flex;
+flex-direction: column;
+height: 100%;
+}
+
+.price-top {
+margin-bottom: 12px;
+}
+
+.badge {
+display: inline-block;
+margin-bottom: 10px;
+padding: 5px 10px;
+font-size: 13px;
+font-weight: 700;
+color: #fff;
+border-radius: 999px;
+background: var(--secondary);
+}
+
+.price {
+font-size: 34px;
+font-weight: 700;
+line-height: 1;
+margin: 8px 0 10px;
+}
+
+.price-sub {
+color: var(--muted);
+margin: 0 0 14px;
+font-size: 15px;
+}
+
+.price-card .btn {
+margin-top: auto;
+}
+
+.faq details {
+border: 1px solid var(--line);
+border-radius: 12px;
+padding: 16px 18px;
+background: #fff;
+}
+
+.faq details + details {
+margin-top: 12px;
+}
+
+.faq summary {
+cursor: pointer;
+font-weight: 700;
+list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+display: none;
+}
+
+.faq .answer {
+margin-top: 12px;
+color: var(--muted);
+}
+
+.footer {
+padding: 28px 0 56px;
+border-top: 1px solid var(--line);
+}
+
+.footer-links {
+display: flex;
+flex-wrap: wrap;
+gap: 16px;
+font-size: 15px;
+color: var(--muted);
+}
+
+.footer-links a {
+color: var(--secondary);
+text-decoration: none;
+}
+
+.footer-links a:hover {
+text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+.grid-2,
+.grid-3 {
+grid-template-columns: 1fr;
+}
+
+.btn {
+width: 100%;
+min-width: 0;
+}
+}
+</style>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"SoftwareApplication",
+"name":"DASH Automation",
+"applicationCategory":"BusinessApplication",
+"operatingSystem":"Windows 10 or later",
+"description":"Automates PDF creation and email preparation from Excel and Word business documents such as invoices, quotations, and purchase orders.",
+"offers":[
+{
+"@type":"Offer",
+"price":"34",
+"priceCurrency":"USD",
+"name":"1 PC License",
+"url":"https://buy.stripe.com/6oUfZh1Om5TY3eJ0Lw8Vi00"
+},
+{
+"@type":"Offer",
+"price":"64",
+"priceCurrency":"USD",
+"name":"2 PC License",
+"url":"https://buy.stripe.com/dRm5kD78Gequ3eJam68Vi04"
+},
+{
+"@type":"Offer",
+"price":"159",
+"priceCurrency":"USD",
+"name":"5 PC License",
+"url":"https://buy.stripe.com/fZu5kD1OmdmqeXreCm8Vi05"
+}
+]
+}
+</script>
+</head>
+<body>
+
+<header class="hero">
+<div class="container">
+<div class="eyebrow">Excel / Word / PDF / Outlook</div>
+
 <h1>Automate PDFs and Emails from Excel or Word in Seconds</h1>
 
-<p>
-Create PDFs and email them instantly from Excel or Word business documents such as invoices, quotations, and purchase orders.
+<p class="subhead">
+Create PDFs and prepare emails from business documents such as invoices, quotations, purchase orders, and reports — with a workflow designed for real office use.
 </p>
 
-<p>
-Runs locally on your computer. No installation required.
-</p>
+<p class="trust-line">Try it first. Only buy if it works for your environment.</p>
 
-<p><strong>Try it first. Only buy if it works for you.</strong></p>
-
-<p>
-<a href="https://forms.gle/EYk4mDCcDhGyNNM16" target="_blank">
+<div class="cta-row">
+<a class="btn btn-primary" href="https://forms.gle/EYk4mDCcDhGyNNM16" target="_blank" rel="noopener">
 🚀 Start Free 14-Day Trial
 </a>
+<a class="btn btn-ghost" href="#purchase-options">
+View License Options
+</a>
+</div>
+
+<p class="helper">
+Runs locally on your computer. No installation required.
 </p>
+</div>
+</header>
 
-<hr>
-
+<main>
+<section class="section" id="how-it-works">
+<div class="container">
 <h2>Watch How It Works</h2>
+<p class="lead">See the actual workflow before you decide.</p>
 
-<p><strong>See exactly how it works in the demo below.</strong></p>
-
+<div class="grid-3">
+<article>
 <h3>Excel → PDF → Email</h3>
+<div class="video-wrap">
+<iframe src="https://www.youtube.com/embed/JfLtdqxC8jE" title="Excel to PDF and Email Demo" allowfullscreen></iframe>
+</div>
+</article>
 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/JfLtdqxC8jE"
-frameborder="0"
-allowfullscreen></iframe>
-
+<article>
 <h3>Word → PDF → Email</h3>
+<div class="video-wrap">
+<iframe src="https://www.youtube.com/embed/jZDfNwd9lqs" title="Word to PDF and Email Demo" allowfullscreen></iframe>
+</div>
+</article>
 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/jZDfNwd9lqs"
-frameborder="0"
-allowfullscreen></iframe>
-
+<article>
 <h3>Images → PDF → Desktop</h3>
+<div class="video-wrap">
+<iframe src="https://www.youtube.com/embed/bYxeDP1sbHU" title="Images to PDF Demo" allowfullscreen></iframe>
+</div>
+</article>
+</div>
+</div>
+</section>
 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/bYxeDP1sbHU"
-frameborder="0"
-allowfullscreen></iframe>
-
-<hr>
-
+<section class="section" id="features">
+<div class="container">
 <h2>What This Tool Does</h2>
 
-<ul>
+<div class="grid-2">
+<div class="card">
+<h3>Automate repetitive document work</h3>
+<ul class="clean">
 <li>Create PDFs from Excel or Word documents with one click</li>
-<li>Automatically prepare email drafts with the PDF attached</li>
-<li>Export images to multi-page PDFs via Word drag & drop</li>
-<li>Save PDFs directly to your desktop</li>
+<li>Prepare email drafts with the PDF attached</li>
+<li>Save PDFs directly to your desktop when email is not needed</li>
+<li>Export images to multi-page PDFs via Word drag &amp; drop</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Designed for practical workflows</h3>
+<ul class="clean">
+<li>Built for invoices, quotations, purchase orders, and similar documents</li>
+<li>Runs locally inside Excel / Word as a macro-enabled workbook</li>
+<li>Reduces manual steps and helps prevent attachment mistakes</li>
+<li>Better suited to business use than generic PDF conversion flows</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section" id="purchase-options">
+<div class="container">
+<h2>Purchase Options</h2>
+
+<p class="purchase-note">
+Starting with the trial is recommended. It lets you confirm that the workflow fits your environment before purchasing.
+</p>
+
+<div class="grid-3">
+<article class="card price-card">
+<div class="price-top">
+<h3>1 PC License</h3>
+<div class="price">$34</div>
+<p class="price-sub">Lifetime license for one computer</p>
+</div>
+
+<ul class="clean">
+<li>Best for individual use</li>
+<li>One-time purchase</li>
+<li>No subscription fee</li>
 </ul>
 
-<hr>
-
-<h2>Pricing</h2>
-
-<p><strong>$34 — Lifetime License</strong></p>
-
-<p>
-One-time purchase. No subscription required.
-</p>
-
-<p>
-<a href="https://buy.stripe.com/6oUfZh1Om5TY3eJ0Lw8Vi00" target="_blank">
-💳 Buy License
+<a class="btn btn-secondary" href="https://buy.stripe.com/6oUfZh1Om5TY3eJ0Lw8Vi00" target="_blank" rel="noopener">
+Buy 1 PC License
 </a>
-</p>
+</article>
 
-<hr>
+<article class="card price-card">
+<div class="price-top">
+<span class="badge">Recommended for teams</span>
+<h3>5 PC License</h3>
+<div class="price">$159</div>
+<p class="price-sub">Lifetime license for up to five computers</p>
+</div>
 
+<ul class="clean">
+<li>Best value for multiple workstations</li>
+<li>Suitable for small teams</li>
+<li>One-time purchase</li>
+</ul>
+
+<a class="btn btn-secondary" href="https://buy.stripe.com/fZu5kD1OmdmqeXreCm8Vi05" target="_blank" rel="noopener">
+Buy 5 PC License
+</a>
+</article>
+
+<article class="card price-card">
+<div class="price-top">
+<h3>2 PC License</h3>
+<div class="price">$64</div>
+<p class="price-sub">Lifetime license for up to two computers</p>
+</div>
+
+<ul class="clean">
+<li>For dual-PC personal use or a small shared setup</li>
+<li>One-time purchase</li>
+<li>No subscription fee</li>
+</ul>
+
+<a class="btn btn-secondary" href="https://buy.stripe.com/dRm5kD78Gequ3eJam68Vi04" target="_blank" rel="noopener">
+Buy 2 PC License
+</a>
+</article>
+</div>
+</div>
+</section>
+
+<section class="section" id="trust">
+<div class="container">
 <h2>Why You Can Trust This Tool</h2>
 
-<ul>
-<li>Created by an independent developer specializing in Excel automation</li>
-<li>Runs entirely on your computer — no cloud access required</li>
-<li>Delivered as a macro-enabled workbook (not an executable program)</li>
-<li>Secure payment processed by Stripe</li>
-<li>Email support available if you encounter any issues</li>
+<div class="grid-2">
+<div class="card">
+<ul class="clean">
+<li>Created by an independent developer focused on Excel and Word workflow automation</li>
+<li>Runs entirely on your computer — no cloud access is required for the workflow itself</li>
+<li>Delivered as a macro-enabled workbook, not an executable program</li>
 </ul>
+</div>
 
-<hr>
+<div class="card">
+<ul class="clean">
+<li>Secure payment is processed by Stripe</li>
+<li>Free support is currently available</li>
+<li>The trial option helps reduce purchase risk before you commit</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
 
+<section class="section" id="requirements">
+<div class="container">
 <h2>System Requirements</h2>
 
-<ul>
+<div class="card">
+<ul class="clean">
 <li>Windows 10 or later</li>
 <li>Microsoft Office 2010 or later</li>
-<li>Outlook Classic (only required for automatic email preparation)</li>
+<li>Outlook Classic is required only for automatic email preparation</li>
 </ul>
 
-<hr>
+<p class="helper" style="margin-top:14px;">
+PDF creation without email preparation is also supported.
+</p>
+</div>
+</div>
+</section>
 
+<section class="section" id="support">
+<div class="container">
 <h2>Support</h2>
 
+<div class="card">
 <p>
 Free support is currently available.
 </p>
-
 <p>
-If you have questions or need adjustments to the macro workbook, feel free to contact us by email.
+If you have questions or need adjustments related to the macro workflow, you can contact us by email after starting the trial or purchasing a license.
 </p>
+</div>
+</div>
+</section>
 
-<hr>
-
+<section class="section faq" id="faq">
+<div class="container">
 <h2>FAQ</h2>
 
-<p><strong>Do I need to install anything?</strong><br>
-No. Just open the workbook and enable macros.</p>
+<details>
+<summary>Do I need to install anything?</summary>
+<div class="answer">
+No. Save the workbook, open it in Excel or Word, and enable macros when prompted.
+</div>
+</details>
 
-<p><strong>Does it work without Outlook?</strong><br>
-Yes. You can still export PDFs to your desktop.</p>
+<details>
+<summary>Does it work without Outlook?</summary>
+<div class="answer">
+Yes. You can still create PDFs and save them to your desktop. Outlook Classic is required only for the email preparation workflow.
+</div>
+</details>
 
-<p><strong>Is there a trial?</strong><br>
-Yes. A 14-day free trial is available.</p>
+<details>
+<summary>Is there a trial?</summary>
+<div class="answer">
+Yes. A 14-day free trial is available and is the recommended starting point.
+</div>
+</details>
 
-<p><strong>Is the software safe?</strong><br>
-Yes. The tool is delivered as a macro-enabled workbook and runs locally on your computer.</p>
+<details>
+<summary>Is the software safe?</summary>
+<div class="answer">
+The tool is delivered as a macro-enabled workbook and runs locally on your computer. It is not an executable application.
+</div>
+</details>
 
-<hr>
+<details>
+<summary>Why are there different PC license options?</summary>
+<div class="answer">
+The license options are separated by the number of computers you want to use. This makes single-PC use clear while also supporting multi-PC needs for teams.
+</div>
+</details>
+</div>
+</section>
 
-<h2>Start Your Free Trial</h2>
-
-<p>
-Try the tool with a full 14-day trial before purchasing.
+<section class="section" id="final-cta">
+<div class="container">
+<h2>Start with the Trial</h2>
+<p class="lead">
+The trial is the best way to confirm compatibility and workflow fit before purchasing.
 </p>
 
-<p>
-<a href="https://forms.gle/EYk4mDCcDhGyNNM16" target="_blank">
+<div class="cta-row">
+<a class="btn btn-primary" href="https://forms.gle/EYk4mDCcDhGyNNM16" target="_blank" rel="noopener">
 🚀 Start Free 14-Day Trial
 </a>
-</p>
-
-<p>or</p>
-
-<p>
-<a href="https://buy.stripe.com/6oUfZh1Om5TY3eJ0Lw8Vi00" target="_blank">
-💳 Buy License ($34)
+<a class="btn btn-ghost" href="#purchase-options">
+Compare License Options
 </a>
-</p>
+</div>
+</div>
+</section>
+</main>
 
-<hr>
+<footer class="footer">
+<div class="container">
+<div class="footer-links">
+<a href="/law.html" target="_blank" rel="noopener">Legal Notice (Specified Commercial Transaction Act)</a>
+</div>
+</div>
+</footer>
 
-<p>
-<a href="https://dash-automation-jp.github.io/dash-automation/law.html" target="_blank">
-Legal Notice (Specified Commercial Transaction Act)
-</a>
-</p>
+</body>
+</html>
