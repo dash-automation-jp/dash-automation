@@ -1,1 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+<title>DASH Automation | Excel・Word PDF 与邮件自动化</title>
+
+<meta name="description" content="一键将 Excel、Word、图片、截图、图纸等转换为 PDF，并自动生成邮件草稿。" />
+
+<style>
+:root {
+--bg: #ffffff;
+--text: #111111;
+--muted: #5f6368;
+--line: #e5e7eb;
+--card: #f8fafc;
+--primary: #166534;
+--primary-hover: #14532d;
+--secondary: #1d4ed8;
+--secondary-hover: #1e40af;
+--max: 1120px;
+--radius: 14px;
+--shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background: var(--bg);
+color: var(--text);
+line-height: 1.65;
+}
+
+.container {
+width: min(100% - 32px, var(--max));
+margin: 0 auto;
+}
+
+.hero {
+padding: 56px 0 32px;
+}
+
+h1 {
+margin: 0 0 18px;
+font-size: clamp(34px, 6vw, 58px);
+line-height: 1.08;
+}
+
+.subhead {
+max-width: 860px;
+font-size: clamp(18px, 2.4vw, 24px);
+color: var(--muted);
+margin: 0 0 20px;
+}
+
+.cta-row {
+display: flex;
+flex-wrap: wrap;
+gap: 14px;
+margin-top: 24px;
+}
+
+.btn {
+display: inline-block;
+text-decoration: none;
+padding: 16px 22px;
+border-radius: 12px;
+font-weight: 700;
+text-align: center;
+border: 1px solid transparent;
+transition: 0.2s ease;
+min-width: 220px;
+}
+
+.btn-primary {
+background: var(--primary);
+color: #fff;
+}
+
+.btn-primary:hover {
+background: var(--primary-hover);
+}
+
+.btn-secondary {
+background: var(--secondary);
+color: #fff;
+}
+
+.btn-secondary:hover {
+background: var(--secondary-hover);
+}
+
+.section {
+padding: 32px 0;
+border-top: 1px solid var(--line);
+}
+
+h2 {
+margin: 0 0 18px;
+font-size: clamp(28px, 4vw, 40px);
+}
+
+.grid-2 {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 18px;
+}
+
+.grid-3 {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 18px;
+}
+
+.card {
+background: var(--card);
+border: 1px solid var(--line);
+border-radius: var(--radius);
+padding: 22px;
+box-shadow: var(--shadow);
+}
+
+.price {
+font-size: 34px;
+font-weight: 700;
+margin: 10px 0;
+}
+
+.price-sub {
+color: var(--muted);
+margin-bottom: 16px;
+}
+
+ul.clean {
+margin: 0;
+padding-left: 20px;
+}
+
+.faq details {
+border: 1px solid var(--line);
+border-radius: 12px;
+padding: 16px 18px;
+background: #fff;
+}
+
+.faq details + details {
+margin-top: 12px;
+}
+
+.faq summary {
+cursor: pointer;
+font-weight: 700;
+list-style: none;
+}
+
+.answer {
+margin-top: 12px;
+color: var(--muted);
+}
+
+.footer {
+padding: 28px 0 56px;
+border-top: 1px solid var(--line);
+}
+
+@media (max-width: 900px) {
+
+.grid-2,
+.grid-3 {
+grid-template-columns: 1fr;
+}
+
+.btn {
+width: 100%;
+min-width: 0;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div style="text-align:right; margin:20px;">
+
+    <a href="index.html"
+       style="display:inline-block;padding:8px 14px;border:1px solid #d1d5db;border-radius:8px;text-decoration:none;margin-left:8px;">
+       English
+    </a>
+
+    <a href="japanese.html"
+       style="display:inline-block;padding:8px 14px;border:1px solid #d1d5db;border-radius:8px;text-decoration:none;margin-left:8px;">
+       日本語
+    </a>
+
+    <a href="cn.html"
+       style="display:inline-block;padding:8px 14px;border:1px solid #d1d5db;border-radius:8px;text-decoration:none;margin-left:8px;">
+       中文
+    </a>
+
+</div>
+
+<header class="hero">
+<div class="container">
+
+<h1>
+一键自动生成 PDF 与邮件草稿
+</h1>
+
+<p class="subhead">
+可将 Excel、Word、图片、截图、图纸等文件一键转换为 PDF，
+并自动生成带附件的邮件草稿。
+</p>
+
+<div class="cta-row">
+
+<a class="btn btn-primary"
+href="https://forms.gle/EYk4mDCcDhGyNNM16"
+target="_blank">
+🚀 开始 14 天免费试用
+</a>
+
+<a class="btn btn-secondary"
+href="#purchase-options">
+查看许可证方案
+</a>
+
+</div>
+
+</div>
+</header>
+
+<main>
+
+<section class="section">
+<div class="container">
+
+<h2>主要功能</h2>
+
+<div class="grid-2">
+
+<div class="card">
+
+<ul class="clean">
+<li>一键将 Excel 或 Word 转换为 PDF</li>
+<li>自动生成带 PDF 附件的邮件草稿</li>
+<li>无需邮件时可直接保存 PDF 到桌面</li>
+<li>支持图片批量转换为多页 PDF</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<ul class="clean">
+<li>适用于报价单、发票、订单等业务文件</li>
+<li>基于 Excel / Word 宏工作簿运行</li>
+<li>减少重复操作与附件错误</li>
+<li>适合日常办公自动化</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="section" id="purchase-options">
+<div class="container">
+
+<h2>购买方案</h2>
+
+<div class="grid-3">
+
+<div class="card">
+
+<h3>1 台电脑许可证</h3>
+
+<div class="price">$34</div>
+
+<div class="price-sub">
+永久许可证
+</div>
+
+<ul class="clean">
+<li>适合个人使用</li>
+<li>一次购买</li>
+<li>无订阅费用</li>
+</ul>
+
+<br>
+
+<a class="btn btn-secondary"
+href="https://buy.stripe.com/6oUfZh1Om5TY3eJ0Lw8Vi00"
+target="_blank">
+购买 1 PC 许可证
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>2 台电脑许可证</h3>
+
+<div class="price">$64</div>
+
+<div class="price-sub">
+永久许可证
+</div>
+
+<ul class="clean">
+<li>最多可用于 2 台电脑</li>
+<li>适合个人双设备使用</li>
+<li>无订阅费用</li>
+</ul>
+
+<br>
+
+<a class="btn btn-secondary"
+href="https://buy.stripe.com/dRm5kD78Gequ3eJam68Vi04"
+target="_blank">
+购买 2 PC 许可证
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>5 台电脑许可证</h3>
+
+<div class="price">$159</div>
+
+<div class="price-sub">
+永久许可证
+</div>
+
+<ul class="clean">
+<li>最多可用于 5 台电脑</li>
+<li>适合团队使用</li>
+<li>无订阅费用</li>
+</ul>
+
+<br>
+
+<a class="btn btn-secondary"
+href="https://buy.stripe.com/fZu5kD1OmdmqeXreCm8Vi05"
+target="_blank">
+购买 5 PC 许可证
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<h2>系统要求</h2>
+
+<div class="card">
+
+<ul class="clean">
+<li>Windows 10 及以上</li>
+<li>Microsoft Office 2010 及以上</li>
+<li>邮件功能需要 Outlook Classic</li>
+</ul>
+
+</div>
+
+</div>
+</section>
+
+<section class="section faq" id="faq">
+<div class="container">
+
+<h2>常见问题</h2>
+
+<details>
+<summary>需要安装吗？</summary>
+
+<div class="answer">
+不需要。直接打开宏工作簿即可。
+</div>
+
+</details>
+
+<details>
+<summary>没有 Outlook 也可以使用吗？</summary>
+
+<div class="answer">
+可以。您仍然可以创建 PDF 并保存到桌面。只有自动生成邮件草稿功能需要 Outlook Classic。
+</div>
+
+</details>
+
+<details>
+<summary>可以免费试用吗？</summary>
+
+<div class="answer">
+可以。提供 14 天免费试用。
+</div>
+
+</details>
+
+<details>
+<summary>软件安全吗？</summary>
+
+<div class="answer">
+本工具以启用宏的工作簿形式提供，并在您的电脑本地运行，不是可执行程序。
+</div>
+
+</details>
+
+<details>
+<summary>一个许可证可以在多少台电脑上使用？</summary>
+
+<div class="answer">
+您可以根据需要选择 1 台、2 台或 5 台电脑许可证。
+</div>
+
+</details>
+
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+<h2>立即开始免费试用</h2>
+
+<p>
+先确认是否适合您的工作流程，再决定是否购买。
+</p>
+
+<div class="cta-row">
+
+<a class="btn btn-primary"
+href="https://forms.gle/EYk4mDCcDhGyNNM16"
+target="_blank">
+🚀 开始免费试用
+</a>
+
+</div>
+
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+<div class="container">
+
+<a href="law.html">
+特定商取引法表示
+</a>
+
+</div>
+</footer>
+
+</body>
+</html>
