@@ -1,82 +1,721 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excel自動化ツール｜PDF＆メール送信をワンクリックで</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>DASH Automation | Excel・Word PDF＆メール自動化</title>
+<meta name="description" content="ExcelやWordの書類からPDF作成とメール作成を自動化。まずは14日間無料トライアルをお試しください。その後、1PC・2PC・5PCライセンスを選択できます。" />
+<meta name="keywords" content="Excel 自動化, Word 自動化, VBAツール, PDF自動化, Outlook メール下書き, 請求書 PDF, 業務効率化, マクロブック" />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://dash-automation-jp.github.io/dash-automation/japanese.html" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="DASH Automation | Excel・Word PDF＆メール自動化" />
+<meta property="og:description" content="ExcelやWordの書類からPDF作成とメール作成を自動化。まずは14日間無料トライアルをお試しください。" />
+<meta property="og:url" content="https://dash-automation-jp.github.io/dash-automation/japanese.html" />
+<meta property="og:site_name" content="DASH Automation" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="DASH Automation | Excel・Word PDF＆メール自動化" />
+<meta name="twitter:description" content="ExcelやWordの書類からPDF作成とメール作成を自動化。まずは14日間無料トライアルをお試しください。" />
+
+<style>
+:root {
+--bg: #ffffff;
+--text: #111111;
+--muted: #5f6368;
+--line: #e5e7eb;
+--card: #f8fafc;
+--primary: #166534;
+--primary-hover: #14532d;
+--secondary: #1d4ed8;
+--secondary-hover: #1e40af;
+--soft: #eef2ff;
+--max: 1120px;
+--radius: 14px;
+--shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+* { box-sizing: border-box; }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background: var(--bg);
+color: var(--text);
+line-height: 1.65;
+}
+
+a {
+color: inherit;
+}
+
+.container {
+width: min(100% - 32px, var(--max));
+margin: 0 auto;
+}
+
+.hero {
+padding: 56px 0 32px;
+}
+
+.eyebrow {
+display: inline-block;
+margin-bottom: 14px;
+padding: 6px 12px;
+border-radius: 999px;
+background: var(--soft);
+color: var(--secondary);
+font-size: 14px;
+font-weight: 700;
+}
+
+h1 {
+margin: 0 0 16px;
+font-size: clamp(34px, 6vw, 58px);
+line-height: 1.08;
+letter-spacing: -0.02em;
+}
+
+.subhead {
+max-width: 860px;
+font-size: clamp(18px, 2.4vw, 24px);
+color: var(--muted);
+margin: 0 0 18px;
+}
+
+.trust-line {
+font-size: 17px;
+font-weight: 700;
+margin: 0 0 24px;
+}
+
+.cta-row {
+display: flex;
+flex-wrap: wrap;
+gap: 14px;
+margin: 0 0 18px;
+}
+
+.btn {
+display: inline-block;
+text-decoration: none;
+padding: 16px 22px;
+border-radius: 12px;
+font-weight: 700;
+text-align: center;
+border: 1px solid transparent;
+transition: 0.2s ease;
+min-width: 220px;
+}
+
+.btn-primary {
+background: var(--primary);
+color: #fff;
+}
+
+.btn-primary:hover {
+background: var(--primary-hover);
+}
+
+.btn-secondary {
+background: var(--secondary);
+color: #fff;
+}
+
+.btn-secondary:hover {
+background: var(--secondary-hover);
+}
+
+.btn-ghost {
+background: #fff;
+border-color: var(--line);
+color: var(--text);
+}
+
+.btn-ghost:hover {
+background: #fafafa;
+}
+
+.helper {
+color: var(--muted);
+font-size: 15px;
+margin: 0;
+}
+
+.section {
+padding: 28px 0;
+border-top: 1px solid var(--line);
+}
+
+h2 {
+margin: 0 0 16px;
+font-size: clamp(28px, 4vw, 40px);
+line-height: 1.15;
+letter-spacing: -0.02em;
+}
+
+h3 {
+margin: 0 0 10px;
+font-size: 22px;
+line-height: 1.25;
+}
+
+.lead {
+color: var(--muted);
+margin: 0 0 18px;
+font-size: 18px;
+}
+
+.grid-2 {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 18px;
+}
+
+.grid-3 {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 18px;
+}
+
+.card {
+background: var(--card);
+border: 1px solid var(--line);
+border-radius: var(--radius);
+padding: 22px;
+box-shadow: var(--shadow);
+}
+
+.card p:last-child,
+.card ul:last-child {
+margin-bottom: 0;
+}
+
+ul.clean {
+margin: 0;
+padding-left: 20px;
+}
+
+.video-wrap {
+position: relative;
+width: 100%;
+padding-bottom: 56.25%;
+border-radius: var(--radius);
+overflow: hidden;
+border: 1px solid var(--line);
+background: #000;
+box-shadow: var(--shadow);
+}
+
+.video-wrap iframe {
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+border: 0;
+}
+
+.purchase-note {
+margin: 0 0 22px;
+padding: 16px 18px;
+border-left: 4px solid var(--primary);
+background: #f0fdf4;
+border-radius: 8px;
+color: #14532d;
+font-weight: 700;
+}
+
+.price-card {
+display: flex;
+flex-direction: column;
+height: 100%;
+}
+
+.price-top {
+margin-bottom: 12px;
+}
+
+.badge {
+display: inline-block;
+margin-bottom: 10px;
+padding: 5px 10px;
+font-size: 13px;
+font-weight: 700;
+color: #fff;
+border-radius: 999px;
+background: var(--secondary);
+}
+
+.price {
+font-size: 34px;
+font-weight: 700;
+line-height: 1;
+margin: 8px 0 10px;
+}
+
+.price-sub {
+color: var(--muted);
+margin: 0 0 14px;
+font-size: 15px;
+}
+
+.price-card .btn {
+margin-top: auto;
+}
+
+.faq details {
+border: 1px solid var(--line);
+border-radius: 12px;
+padding: 16px 18px;
+background: #fff;
+}
+
+.faq details + details {
+margin-top: 12px;
+}
+
+.faq summary {
+cursor: pointer;
+font-weight: 700;
+list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+display: none;
+}
+
+.faq .answer {
+margin-top: 12px;
+color: var(--muted);
+}
+
+.footer {
+padding: 28px 0 56px;
+border-top: 1px solid var(--line);
+}
+
+.footer-links {
+display: flex;
+flex-wrap: wrap;
+gap: 16px;
+font-size: 15px;
+color: var(--muted);
+}
+
+.footer-links a {
+color: var(--secondary);
+text-decoration: none;
+}
+
+.footer-links a:hover {
+text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+.grid-2,
+.grid-3 {
+grid-template-columns: 1fr;
+}
+
+.btn {
+width: 100%;
+min-width: 0;
+}
+}
+</style>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"SoftwareApplication",
+"name":"DASH Automation",
+"applicationCategory":"BusinessApplication",
+"operatingSystem":"Windows 10 以降",
+"description":"請求書、見積書、発注書などのExcel・Word業務書類からPDF作成とメール準備を自動化します。",
+"offers":[
+{
+"@type":"Offer",
+"price":"34",
+"priceCurrency":"USD",
+"name":"1 PC ライセンス",
+"url":"https://buy.stripe.com/6oUfZh1Om5TY3eJ0Lw8Vi00"
+},
+{
+"@type":"Offer",
+"price":"64",
+"priceCurrency":"USD",
+"name":"2 PC ライセンス",
+"url":"https://buy.stripe.com/dRm5kD78Gequ3eJam68Vi04"
+},
+{
+"@type":"Offer",
+"price":"159",
+"priceCurrency":"USD",
+"name":"5 PC ライセンス",
+"url":"https://buy.stripe.com/fZu5kD1OmdmqeXreCm8Vi05"
+}
+]
+}
+</script>
 </head>
-<body style="font-family: Arial, sans-serif; max-width: 800px; margin: auto; line-height: 1.6;">
+<body>
+
 <div style="text-align:right; margin-bottom:20px;">
-    <a href="index.html" style="padding:8px 12px; border:1px solid #333; text-decoration:none; border-radius:5px;">English</a>
+    <a href="index.html">English</a>
 </div>
-    <h1>Excel → PDF → メール送信をワンクリックで自動化</h1>
 
-    <p>
-        毎回こんな作業をしていませんか？
-    </p>
+<header class="hero">
+<div class="container">
 
-    <ul>
-        <li>ExcelをPDFに変換</li>
-        <li>Outlookを開く</li>
-        <li>ファイルを添付</li>
-        <li>メール作成</li>
-    </ul>
+<div class="eyebrow">Excel / Word / PDF / Outlook</div>
 
-    <p>
-        このツールは、それらをすべてワンクリックで実行します。
-    </p>
+<h1>ExcelやWordからPDFとメール作成を数秒で自動化</h1>
 
-    <h2>機能</h2>
+<p class="subhead">
+請求書、見積書、発注書、報告書などの業務書類から、
+PDF作成とメール準備をワンクリックで自動化できます。
+</p>
 
-    <ul>
-        <li>ExcelやWordをPDFに自動変換</li>
-        <li>Outlookのメール下書きを自動作成</li>
-        <li>PDFを自動添付</li>
-        <li>作業時間とミスを削減</li>
-          <li>ついでに画像や写真もPDFに変換</li>
-    </ul>
+<p class="trust-line">
+まずは無料トライアルでお試しください。環境に合うことを確認してから購入できます。
+</p>
 
-
-
-    <h2>無料トライアル</h2>
-
-    <p>
-        14日間のしばり無し、勧誘一切無し無料トライアルをご利用いただけます。<br>
-        無料トライアル版のマクロブックから、本申込のサイトの案内も記載されています。
-
-    </p>
+<div class="cta-row">
 <a class="btn btn-primary" href="https://forms.gle/EYk4mDCcDhGyNNM16" target="_blank" rel="noopener">
-🚀 無料14日間トライアルを開始
+🚀 14日間無料トライアルを開始
 </a>
-    <h2>プラン(STRIPE経由でクレジットカード処理での支払いです）</h2>
 
-    <ul>
-        <li>1PCライセンス  $34</li>
-        <li>2PCライセンス  $64</li>
-        <li>5PCライセンス $159</li>
-         <li>購入希望者は、トライアル経由でのマクロブックでご案内しています。</li>
-    </ul>
+<a class="btn btn-ghost" href="#purchase-options">
+ライセンス一覧を見る
+</a>
+</div>
 
- 
+<p class="helper">
+インストール不要。パソコン上でローカル動作します。
+</p>
 
-    <h2>お問い合わせ</h2>
+</div>
+</header>
 
-    <p>
-        ご質問等は、以下までご連絡ください。<br>
-        tadashtd@gmail.com
-    </p>
+<main>
 
-    <hr>
+<section class="section" id="how-it-works">
+<div class="container">
 
-    <p>
-        © dash_automation_tool
-    </p>
+<h2>実際の動作を見る</h2>
+
+<p class="lead">
+購入前に実際のワークフローを確認できます。
+</p>
+
+<div class="grid-3">
+
+<article>
+<h3>Excel → PDF → メール</h3>
+<div class="video-wrap">
+<iframe src="https://www.youtube.com/embed/JfLtdqxC8jE" title="Excel PDF メール デモ" allowfullscreen></iframe>
+</div>
+</article>
+
+<article>
+<h3>Word → PDF → メール</h3>
+<div class="video-wrap">
+<iframe src="https://www.youtube.com/embed/jZDfNwd9lqs" title="Word PDF メール デモ" allowfullscreen></iframe>
+</div>
+</article>
+
+<article>
+<h3>画像 → PDF → デスクトップ保存</h3>
+<div class="video-wrap">
+<iframe src="https://www.youtube.com/embed/bYxeDP1sbHU" title="画像 PDF デモ" allowfullscreen></iframe>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<section class="section" id="features">
+<div class="container">
+
+<h2>このツールでできること</h2>
+
+<div class="grid-2">
+
+<div class="card">
+<h3>繰り返し業務を自動化</h3>
+
+<ul class="clean">
+<li>ExcelやWordからワンクリックでPDF作成</li>
+<li>PDF添付済みメール下書きを自動準備</li>
+<li>メール不要時はPDFを直接デスクトップ保存</li>
+<li>画像をWordへドラッグ＆ドロップして複数ページPDF化</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>実務向けワークフロー設計</h3>
+
+<ul class="clean">
+<li>請求書、見積書、発注書などの業務書類向け</li>
+<li>Excel / Word内で動作するマクロブック形式</li>
+<li>手作業削減と添付ミス防止をサポート</li>
+<li>一般的なPDF変換より業務用途に特化</li>
+</ul>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section" id="purchase-options">
+<div class="container">
+
+<h2>購入プラン</h2>
+
+<p class="purchase-note">
+まずは無料トライアルで、環境や運用に合うか確認してからの購入を推奨しています。
+</p>
+
+<div class="grid-3">
+
+<article class="card price-card">
+
+<div class="price-top">
+<h3>1 PC ライセンス</h3>
+<div class="price">$34</div>
+<p class="price-sub">1台用・永久ライセンス</p>
+</div>
+
+<ul class="clean">
+<li>個人利用向け</li>
+<li>買い切り型</li>
+<li>サブスク料金なし</li>
+</ul>
+
+<a class="btn btn-secondary" href="https://buy.stripe.com/6oUfZh1Om5TY3eJ0Lw8Vi00" target="_blank" rel="noopener">
+1 PC ライセンス購入
+</a>
+
+</article>
+
+<article class="card price-card">
+
+<div class="price-top">
+<span class="badge">チーム利用向け</span>
+
+<h3>5 PC ライセンス</h3>
+
+<div class="price">$159</div>
+
+<p class="price-sub">
+最大5台用・永久ライセンス
+</p>
+</div>
+
+<ul class="clean">
+<li>複数PC利用で最もお得</li>
+<li>小規模チーム向け</li>
+<li>買い切り型</li>
+</ul>
+
+<a class="btn btn-secondary" href="https://buy.stripe.com/fZu5kD1OmdmqeXreCm8Vi05" target="_blank" rel="noopener">
+5 PC ライセンス購入
+</a>
+
+</article>
+
+<article class="card price-card">
+
+<div class="price-top">
+<h3>2 PC ライセンス</h3>
+
+<div class="price">$64</div>
+
+<p class="price-sub">
+最大2台用・永久ライセンス
+</p>
+</div>
+
+<ul class="clean">
+<li>個人の2台利用や小規模共有向け</li>
+<li>買い切り型</li>
+<li>サブスク料金なし</li>
+</ul>
+
+<a class="btn btn-secondary" href="https://buy.stripe.com/dRm5kD78Gequ3eJam68Vi04" target="_blank" rel="noopener">
+2 PC ライセンス購入
+</a>
+
+</article>
+
+</div>
+</div>
+</section>
+
+<section class="section" id="trust">
+<div class="container">
+
+<h2>このツールについて</h2>
+
+<div class="grid-2">
+
+<div class="card">
+<ul class="clean">
+<li>Excel・Word業務効率化向けに開発</li>
+<li>クラウド不要。ローカル環境で動作</li>
+<li>実行ファイルではなくマクロブック形式</li>
+</ul>
+</div>
+
+<div class="card">
+<ul class="clean">
+<li>決済はStripeによる安全決済</li>
+<li>現在サポート対応あり</li>
+<li>無料トライアルで事前確認可能</li>
+</ul>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section" id="requirements">
+<div class="container">
+
+<h2>動作環境</h2>
+
+<div class="card">
+
+<ul class="clean">
+<li>Windows 10 以降</li>
+<li>Microsoft Office 2010 以降</li>
+<li>メール自動準備機能には Outlook Classic が必要</li>
+</ul>
+
+<p class="helper" style="margin-top:14px;">
+PDF作成のみであればOutlookは不要です。
+</p>
+
+</div>
+</div>
+</section>
+
+<section class="section" id="support">
+<div class="container">
+
+<h2>サポート</h2>
+
+<div class="card">
+
+<p>
+現在、無料サポート対応中です。
+</p>
+
+<p>
+マクロの動作や調整に関する質問は、
+トライアル開始後または購入後にメールでお問い合わせいただけます。
+</p>
+
+</div>
+</div>
+</section>
+
+<section class="section faq" id="faq">
+<div class="container">
+
+<h2>FAQ</h2>
+
+<details>
+<summary>インストールは必要ですか？</summary>
+
+<div class="answer">
+不要です。ブックを保存し、ExcelまたはWordで開いてマクロを有効化してください。
+</div>
+
+</details>
+
+<details>
+<summary>Outlookが無くても使えますか？</summary>
+
+<div class="answer">
+はい。PDF作成とデスクトップ保存は可能です。メール下書き機能のみ Outlook Classic が必要です。
+</div>
+
+</details>
+
+<details>
+<summary>無料トライアルはありますか？</summary>
+
+<div class="answer">
+はい。14日間無料トライアルを利用できます。
+</div>
+
+</details>
+
+<details>
+<summary>安全ですか？</summary>
+
+<div class="answer">
+このツールはローカル環境で動作するマクロブック形式です。実行ファイルではありません。
+</div>
+
+</details>
+
+<details>
+<summary>なぜ複数のライセンスがありますか？</summary>
+
+<div class="answer">
+使用するPC台数に応じて選択できます。個人利用からチーム利用まで対応しています。
+</div>
+
+</details>
+
+</div>
+</section>
+
+<section class="section" id="final-cta">
+<div class="container">
+
+<h2>まずは無料トライアルから</h2>
+
+<p class="lead">
+購入前に、動作環境との互換性やワークフロー適合を確認できます。
+</p>
+
+<div class="cta-row">
+
+<a class="btn btn-primary" href="https://forms.gle/EYk4mDCcDhGyNNM16" target="_blank" rel="noopener">
+🚀 14日間無料トライアルを開始
+</a>
+
+<a class="btn btn-ghost" href="#purchase-options">
+ライセンス比較を見る
+</a>
+
+</div>
+</div>
+</section>
+
+</main>
+
 <footer class="footer">
 <div class="container">
+
 <div class="footer-links">
-<a href="https://dash-automation-jp.github.io/dash-automation//law.html" target="_blank" rel="noopener"> 特定商取引法に基づく表記</a>
+<a href="https://dash-automation-jp.github.io/dash-automation/law.html" target="_blank" rel="noopener">
+特定商取引法に基づく表記
+</a>
 </div>
+
 </div>
 </footer>
+
 </body>
 </html>
