@@ -63,6 +63,7 @@ display: flex;
 flex-wrap: wrap;
 gap: 14px;
 margin-top: 24px;
+align-items: center;
 }
 
 .btn {
@@ -95,6 +96,16 @@ color: #fff;
 background: var(--secondary-hover);
 }
 
+.wechat-notice {
+font-size: 14px;
+color: var(--muted);
+background: #f1f5f9;
+padding: 12px 16px;
+border-radius: 8px;
+border-left: 4px solid #22c55e;
+margin-top: 8px;
+}
+
 .section {
 padding: 32px 0;
 border-top: 1px solid var(--line);
@@ -125,10 +136,16 @@ padding: 22px;
 box-shadow: var(--shadow);
 }
 
+.old-price {
+text-decoration: line-through;
+color: var(--muted);
+font-size: 16px;
+}
+
 .price {
 font-size: 34px;
 font-weight: 700;
-margin: 10px 0;
+margin: 5px 0;
 }
 
 .price-sub {
@@ -178,6 +195,11 @@ grid-template-columns: 1fr;
 .btn {
 width: 100%;
 min-width: 0;
+}
+
+.cta-row {
+flex-direction: column;
+align-items: stretch;
 }
 
 }
@@ -230,6 +252,10 @@ href="#purchase-options">
 查看许可证方案
 </a>
 
+</div>
+
+<div class="wechat-notice">
+    💡 <strong>无法打开上方申请表单？</strong> 中国国内用户如无法访问 Google 表单，请直接在微信（WeChat）上添加 ID：<strong>tadashtd</strong> 并说明“申请试用”，我将直接把试用版发送给您。
 </div>
 
 </div>
@@ -324,7 +350,7 @@ target="_blank">
 <br>
 
 <a class="btn btn-secondary"
-href="https://buy.stripe.com/00w9ATboW8263eJ8dY8Vi06"
+href="https://buy.stripe.com/dRm5kD78Gequ3eJam68Vi04"
 target="_blank">
 购买 2 PC 许可证
 </a>
@@ -365,14 +391,15 @@ target="_blank">
 <section class="section">
 <div class="container">
 
-<h2>系统要求</h2>
+<h2>系统运行环境要求</h2>
 
-<div class="card">
+<div class="card" style="border-left: 4px solid #dc2626;">
 
 <ul class="clean">
-<li>Windows 10 及以上</li>
-<li>Microsoft Office 2010 及以上</li>
-<li>邮件功能需要 Outlook Classic</li>
+<li style="color: #dc2626; font-weight: bold;">❌ 彻底不支持 Mac / macOS！仅限 Windows PC。</li>
+<li>Windows 10 或更高版本</li>
+<li>Microsoft Office 2010 或更高版本（必须支持并启用宏）</li>
+<li>邮件发送功能需要 Outlook Classic（经典版）</li>
 </ul>
 
 </div>
@@ -452,6 +479,10 @@ target="_blank">
 
 </div>
 
+<div class="wechat-notice">
+    💡 <strong>打不开表单？</strong> 国内用户如果无法提交，请直接在微信（WeChat）上添加 ID：<strong>tadashtd</strong> 联络我获取试用版。
+</div>
+
 </div>
 </section>
 
@@ -465,4 +496,5 @@ target="_blank">
 </footer>
 
 </body>
+
 </html>
