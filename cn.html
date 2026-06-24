@@ -295,20 +295,23 @@ href="#purchase-options">
   </div>
 </section>    
 
+<!-- 功能演示视频 (修正版) -->
 <section class="section" id="demo-video">
   <div class="container">
     <h2>功能演示视频</h2>
     <div class="card" style="padding: 10px; background: #f1f5f9;">
-       <video width="100%" controls style="border-radius: 8px; box-shadow: var(--shadow); display: block;">
+      <!-- controls:再生ボタンなどの表示, preload:読み込み設定 -->
+      <video width="100%" controls preload="metadata" style="border-radius: 8px; box-shadow: var(--shadow); display: block; background: #000;">
+        <!-- ファイル名が demo01.mp4 の場合は小文字に合わせてください -->
         <source src="DEMO01.mp4" type="video/mp4">
-        您的浏览器不支持播放该视频，请通过微信联系我获取演示。
+        您的浏览器不支持播放该视频。
       </video>
     </div>
-    <p class="helper" style="margin-top: 10px; color: #64748b;">
-      💡 提示：如果由于网络原因视频无法加载，请添加上方微信直接获取视频演示。
+    <p style="margin-top: 10px; font-size: 14px; color: #64748b;">
+      💡 如果视频无法加载，请尝试刷新页面，或添加微信直接获取演示。
     </p>
   </div>
-</section>    
+</section>
 
 <!-- 界面详展示：全中文贴心指引 -->
 <section class="section" id="interface-details">
